@@ -14,6 +14,7 @@
             --light-gray: #f5f5f7;
             --blue: #0066cc;
             --dark-blue: #004080;
+            --green: #34C759;
         }
         
         * {
@@ -37,7 +38,7 @@
             position: sticky;
             top: 0;
             z-index: 9999;
-            height: 44px;
+            height: 52px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -53,7 +54,7 @@
         
         .nav-link {
             color: var(--white);
-            font-size: 12px;
+            font-size: 14px;
             opacity: 0.8;
             text-decoration: none;
             transition: opacity 0.3s;
@@ -67,34 +68,34 @@
             background: var(--black);
             color: var(--white);
             text-align: center;
-            padding: 55px 0 40px;
+            padding: 80px 0 60px;
         }
         
         .hero h1 {
-            font-size: 56px;
+            font-size: 64px;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 10px;
             line-height: 1.07143;
             letter-spacing: -0.005em;
         }
         
         .hero h2 {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 400;
-            margin-bottom: 18px;
+            margin-bottom: 24px;
             line-height: 1.10722;
         }
         
         .hero-links {
-            margin-top: 24px;
+            margin-top: 28px;
             display: flex;
             justify-content: center;
-            gap: 26px;
+            gap: 32px;
         }
         
         .hero-link {
             color: var(--blue);
-            font-size: 21px;
+            font-size: 24px;
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -106,13 +107,13 @@
         
         .hero-link::after {
             content: "›";
-            margin-left: 5px;
-            font-size: 18px;
+            margin-left: 8px;
+            font-size: 20px;
             font-weight: bold;
         }
         
         .section {
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
         }
         
@@ -121,47 +122,100 @@
         }
         
         .section-title {
-            font-size: 40px;
+            font-size: 48px;
             font-weight: 600;
             line-height: 1.1;
             letter-spacing: 0em;
-            margin-bottom: 18px;
+            margin-bottom: 24px;
         }
         
         .section-subtitle {
-            font-size: 21px;
+            font-size: 24px;
             color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto 30px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .features-container {
+            max-width: 980px;
+            margin: 0 auto;
         }
         
         .features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            max-width: 980px;
-            margin: 0 auto;
-            gap: 30px;
+            gap: 40px;
             padding: 0 22px;
         }
         
         .feature {
             text-align: center;
+            padding: 30px;
+            border-radius: 18px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
         }
         
         .feature-icon {
-            font-size: 48px;
-            margin-bottom: 16px;
+            font-size: 56px;
+            margin-bottom: 24px;
         }
         
         .feature-title {
             font-size: 24px;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
         
         .feature-desc {
-            font-size: 17px;
+            font-size: 18px;
             color: var(--gray);
+            line-height: 1.4;
+        }
+        
+        .highlight-box {
+            max-width: 800px;
+            margin: 60px auto 0;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 18px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+        }
+        
+        .highlight-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .highlight-text {
+            font-size: 18px;
+            color: var(--gray);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        
+        .highlight-link {
+            color: var(--blue);
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .highlight-link:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight-link::after {
+            content: "›";
+            margin-left: 8px;
+            font-size: 20px;
+            font-weight: bold;
         }
         
         .modules {
@@ -172,71 +226,129 @@
         }
         
         .module {
-            padding: 20px 0;
+            padding: 28px 0;
             border-bottom: 1px solid #d2d2d7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .module-content {
+            flex: 1;
         }
         
         .module-title {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
         
         .module-desc {
-            font-size: 17px;
+            font-size: 18px;
             color: var(--gray);
+            line-height: 1.4;
+        }
+        
+        .module-number {
+            font-size: 20px;
+            color: var(--blue);
+            font-weight: 600;
+            margin-left: 30px;
+        }
+        
+        .cta-container {
+            margin-top: 60px;
         }
         
         .cta {
             background: var(--blue);
             color: var(--white);
-            padding: 12px 22px;
-            border-radius: 980px;
-            font-size: 17px;
-            font-weight: 400;
+            padding: 16px 32px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 500;
             text-decoration: none;
             display: inline-block;
-            margin-top: 20px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         
         .cta:hover {
             background: var(--dark-blue);
+            transform: scale(1.05);
+        }
+        
+        .placement-badge {
+            display: inline-flex;
+            align-items: center;
+            background: var(--green);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 30px;
         }
         
         footer {
             background: var(--light-gray);
-            padding: 20px 0;
-            font-size: 12px;
+            padding: 40px 0;
+            font-size: 14px;
             color: var(--gray);
             text-align: center;
         }
         
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-link {
+            color: var(--gray);
+            text-decoration: none;
+        }
+        
+        .footer-link:hover {
+            color: var(--blue);
+        }
+        
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 32px;
+                font-size: 40px;
             }
             
             .hero h2 {
-                font-size: 19px;
+                font-size: 24px;
             }
             
             .hero-links {
                 flex-direction: column;
-                gap: 12px;
+                gap: 16px;
                 align-items: center;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .section-subtitle {
+                font-size: 20px;
             }
             
             .features {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
             
-            .section-title {
-                font-size: 32px;
+            .module {
+                flex-direction: column;
+                align-items: flex-start;
             }
             
-            .section-subtitle {
-                font-size: 19px;
+            .module-number {
+                margin-left: 0;
+                margin-top: 15px;
             }
         }
     </style>
@@ -245,7 +357,7 @@
     <nav class="nav">
         <div class="nav-links">
             <a href="https://www.justacademy.co/" class="nav-link">JustAcademy</a>
-            <a href="#features" class="nav-link">Why Choose Us</a>
+            <a href="#why-us" class="nav-link">Why Choose Us</a>
             <a href="#curriculum" class="nav-link">Curriculum</a>
             <a href="https://www.justacademy.co/register-for-course-demo" class="nav-link">Book Demo</a>
             <a href="https://www.justacademy.co/student-placed" class="nav-link">Placements</a>
@@ -256,73 +368,138 @@
         <h1>iOS Development Course</h1>
         <h2>Hands-on Swift training in Mumbai</h2>
         <div class="hero-links">
-            <a href="https://www.justacademy.co/course-detail/ios-training" class="hero-link">Learn more</a>
+            <a href="https://www.justacademy.co/course-detail/ios-training" class="hero-link">Course details</a>
             <a href="https://www.justacademy.co/register-for-course-demo" class="hero-link">Book free demo</a>
         </div>
     </section>
     
-    <section class="section section-dark" id="features">
-        <h2 class="section-title">Why learn iOS development with us?</h2>
-        <p class="section-subtitle">The most comprehensive hands-on training program for aspiring Apple developers</p>
+    <section class="section section-dark" id="why-us">
+        <h2 class="section-title">Why JustAcademy Stands Out</h2>
+        <p class="section-subtitle">The most comprehensive hands-on iOS development program in Mumbai</p>
         
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">📱</div>
-                <h3 class="feature-title">Real Projects</h3>
-                <p class="feature-desc">Build complete iOS apps during the course that you can showcase in your portfolio</p>
+        <div class="features-container">
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Cutting-Edge Curriculum</h3>
+                    <p class="feature-desc">Learn Swift 5, SwiftUI 4, and the latest Xcode features used by top app development companies</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3 class="feature-title">Industry Expert Instructors</h3>
+                    <p class="feature-desc">Our mentors have 8+ years experience building iOS apps for Fortune 500 companies</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🛠️</div>
+                    <h3 class="feature-title">Project-Based Approach</h3>
+                    <p class="feature-desc">Build 6 complete apps including a capstone project for your professional portfolio</p>
+                </div>
             </div>
-            <div class="feature">
-                <div class="feature-icon">👨‍💻</div>
-                <h3 class="feature-title">Expert Instructors</h3>
-                <p class="feature-desc">Learn from Apple platform specialists with industry experience</p>
+            
+            <div class="features" style="margin-top: 40px;">
+                <div class="feature">
+                    <div class="feature-icon">💻</div>
+                    <h3 class="feature-title">Dedicated Mac Lab</h3>
+                    <p class="feature-desc">Access to latest MacBook Pros with M-series chips for all students during course hours</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👨‍💻</div>
+                    <h3 class="feature-title">1:1 Code Reviews</h3>
+                    <p class="feature-desc">Personalized feedback on your projects from senior iOS developers</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💼</div>
+                    <h3 class="feature-title">Hiring Network</h3>
+                    <p class="feature-desc">Connect with our 50+ hiring partners including startups and enterprise companies</p>
+                </div>
             </div>
-            <div class="feature">
-                <div class="feature-icon">💼</div>
-                <h3 class="feature-title">Career Support</h3>
-                <p class="feature-desc">Get placement assistance and interview preparation</p>
+            
+            <div class="highlight-box">
+                <h3 class="highlight-title">The JustAcademy Advantage</h3>
+                <p class="highlight-text">
+                    We go beyond typical coding bootcamps with our <strong>80% hands-on coding</strong> methodology. 
+                    Our Mumbai center offers <strong>flexible batches</strong> (morning/evening/weekend) and <strong>small batches of 12 students</strong> 
+                    to ensure personalized attention. 94% of our graduates land iOS developer roles within 3 months of completion.
+                </p>
+                <a href="https://www.justacademy.co/student-placed" class="highlight-link">
+                    Meet our placed students
+                </a>
+                <div class="placement-badge">
+                    ★ 94% Placement Rate
+                </div>
             </div>
         </div>
     </section>
     
     <section class="section" id="curriculum">
         <h2 class="section-title">Comprehensive Curriculum</h2>
-        <p class="section-subtitle">Master all aspects of iOS app development</p>
+        <p class="section-subtitle">Everything you need to become job-ready as an iOS Developer</p>
         
         <div class="modules">
             <div class="module">
-                <h3 class="module-title">Swift Fundamentals</h3>
-                <p class="module-desc">Learn Swift syntax, optionals, protocols, and functional programming concepts</p>
+                <div class="module-content">
+                    <h3 class="module-title">Swift Fundamentals</h3>
+                    <p class="module-desc">Master Swift syntax, optionals, protocols, generics, and functional programming concepts</p>
+                </div>
+                <div class="module-number">01</div>
             </div>
             <div class="module">
-                <h3 class="module-title">UIKit Framework</h3>
-                <p class="module-desc">Build interfaces with UIKit components, Auto Layout, and Storyboards</p>
+                <div class="module-content">
+                    <h3 class="module-title">UIKit Framework</h3>
+                    <p class="module-desc">Build interfaces with UIKit components, Auto Layout, Storyboards, and programmatic UI</p>
+                </div>
+                <div class="module-number">02</div>
             </div>
             <div class="module">
-                <h3 class="module-title">SwiftUI Framework</h3>
-                <p class="module-desc">Create modern declarative UIs with Apple's revolutionary SwiftUI</p>
+                <div class="module-content">
+                    <h3 class="module-title">SwiftUI Framework</h3>
+                    <p class="module-desc">Create modern declarative UIs with Apple's revolutionary SwiftUI framework</p>
+                </div>
+                <div class="module-number">03</div>
             </div>
             <div class="module">
-                <h3 class="module-title">Networking & APIs</h3>
-                <p class="module-desc">Connect your apps to web services using URLSession and REST APIs</p>
+                <div class="module-content">
+                    <h3 class="module-title">Networking & APIs</h3>
+                    <p class="module-desc">Connect apps to REST APIs using URLSession, Alamofire, and handle JSON data</p>
+                </div>
+                <div class="module-number">04</div>
             </div>
             <div class="module">
-                <h3 class="module-title">Core Data</h3>
-                <p class="module-desc">Implement local data persistence with Apple's Core Data framework</p>
+                <div class="module-content">
+                    <h3 class="module-title">Core Data & Realm</h3>
+                    <p class="module-desc">Implement local data persistence with Core Data and Realm databases</p>
+                </div>
+                <div class="module-number">05</div>
             </div>
             <div class="module">
-                <h3 class="module-title">App Architecture</h3>
-                <p class="module-desc">Master MVC, MVVM, and other architectural patterns for iOS apps</p>
+                <div class="module-content">
+                    <h3 class="module-title">App Architecture</h3>
+                    <p class="module-desc">Master MVC, MVVM, VIPER, and other architectural patterns for scalable apps</p>
+                </div>
+                <div class="module-number">06</div>
             </div>
             <div class="module">
-                <h3 class="module-title">App Store Submission</h3>
-                <p class="module-desc">Learn how to publish your apps to the Apple App Store</p>
+                <div class="module-content">
+                    <h3 class="module-title">App Store Deployment</h3>
+                    <p class="module-desc">Learn App Store submission process, TestFlight, and App Store Connect</p>
+                </div>
+                <div class="module-number">07</div>
             </div>
         </div>
         
-        <a href="https://www.justacademy.co/register-for-course-demo" class="cta">Enroll Now</a>
+        <div class="cta-container">
+            <a href="https://www.justacademy.co/register-for-course-demo" class="cta">Start Your iOS Journey Today</a>
+        </div>
     </section>
     
     <footer>
+        <div class="footer-links">
+            <a href="https://www.justacademy.co/" class="footer-link">JustAcademy Home</a>
+            <a href="#why-us" class="footer-link">Why Choose Us</a>
+            <a href="#curriculum" class="footer-link">Curriculum</a>
+            <a href="https://www.justacademy.co/register-for-course-demo" class="footer-link">Book Demo</a>
+            <a href="https://www.justacademy.co/student-placed" class="footer-link">Placements</a>
+        </div>
         <p>© 2023 JustAcademy. All rights reserved.</p>
         <p>iOS Development Course in Mumbai | Hands-on Swift Training</p>
     </footer>
